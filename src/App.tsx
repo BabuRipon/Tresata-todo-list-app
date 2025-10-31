@@ -7,7 +7,7 @@ import EditTodoForm from './components/EditTodo';
 import TodoHeadingComponent from './components/TodoHeading'
 
 import './App.css';
-import { Statusenum, type todo } from './utils/types';
+import { type todo } from './utils/types';
 
 function App() {
   const [todos, setTodos] = useState<todo[]>([]);
