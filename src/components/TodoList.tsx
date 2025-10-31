@@ -26,7 +26,7 @@ const TodoList = function ({todos, setTodos}: todosAndsetTodosType) {
                     }
                 </div>
                 {
-                   openBar==Statusenum.Progressing && todos.filter(el=>el.status==Statusenum.Progressing).map(todo => <TodoItem todo={todo}/>)
+                   openBar==Statusenum.Progressing && todos.filter(el=>el.status==Statusenum.Progressing).map(todo => <TodoItem todo={todo} todos={todos} setTodos={setTodos}/>)
                 }
             </div>
             <div className="my-4">
@@ -37,7 +37,7 @@ const TodoList = function ({todos, setTodos}: todosAndsetTodosType) {
                     }
                 </div>
                 {
-                   openBar==Statusenum.Pending && todos.filter(el=>el.status==Statusenum.Pending).map(todo => <TodoItem todo={todo}/>)
+                   openBar==Statusenum.Pending && todos.filter(el=>el.status==Statusenum.Pending).map(todo => <TodoItem todo={todo} todos={todos} setTodos={setTodos} />)
                 }
             </div>
             <div className="my-4">
@@ -48,7 +48,7 @@ const TodoList = function ({todos, setTodos}: todosAndsetTodosType) {
                     }
                 </div>
                 {
-                   openBar==Statusenum.Completed && todos.filter(el=>el.status==Statusenum.Completed).map(todo => <TodoItem todo={todo}/>)
+                   openBar==Statusenum.Completed && todos.filter(el=>el.status==Statusenum.Completed).map(todo => <TodoItem todo={todo} todos={todos} setTodos={setTodos} />)
                 }
             </div>
         </div>

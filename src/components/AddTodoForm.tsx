@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { v4 as uuidv4 } from 'uuid';
 
 import type { setTodosType, todo } from "../utils/types";
@@ -7,6 +8,7 @@ import { Statusenum } from "../utils/types";
 const AddTodoForm = function ({setTodos}: setTodosType) {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
+    const navigate = useNavigate();
 
     const handleSubmit = () => {
        const newTodo: todo = {
@@ -21,6 +23,7 @@ const AddTodoForm = function ({setTodos}: setTodosType) {
         });
         setTitle('');
         setDescription('');
+        navigate('/');
     }
 
     return (
